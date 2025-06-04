@@ -10,10 +10,10 @@ const startPauseBtn = document.getElementById("start-pause");
 const iniciarPausarBtn = document.querySelector("#start-pause span");
 const timerNaTela = document.getElementById("timer");
 
-const musica = new Audio('/sons/luna-rise-part-one.mp3');
-const beepAudio = new Audio('/sons/beep.mp3');
-const playAudio = new Audio('/sons/play.wav');
-const pauseAudio = new Audio('/sons/pause.mp3');
+const musica = new Audio('sons/luna-rise-part-one.mp3');
+const beepAudio = new Audio('sons/beep.mp3');
+const playAudio = new Audio('sons/play.wav');
+const pauseAudio = new Audio('sons/pause.mp3');
 
 let tempoDecorridoEmSegundos = 1500;
 let intervaloId;
@@ -52,7 +52,7 @@ function alterarContexto(contexto) {
     });
 
     html.setAttribute('data-contexto', contexto);
-    banner.setAttribute('src', `/imagens/${contexto}.png`);
+    banner.setAttribute('src', `imagens/${contexto}.png`);
     switch (contexto) {
         case 'foco':
             titulo.innerHTML = `
@@ -101,12 +101,12 @@ function iniciarPausar() {
     playAudio.play();
     intervaloId = setInterval(contagemRegressiva, 1000);
     iniciarPausarBtn.textContent = "Pausar";
-    iniciarPausarBtn.previousElementSibling.src = "/imagens/pause.png";
+    iniciarPausarBtn.previousElementSibling.src = "imagens/pause.png";
 }
 
 function zerar() {
     iniciarPausarBtn.textContent = "Começar";
-    iniciarPausarBtn.previousElementSibling.src = "/imagens/play_arrow.png";
+    iniciarPausarBtn.previousElementSibling.src = "imagens/play_arrow.png";
     clearInterval(intervaloId);
     intervaloId = null;
 }
