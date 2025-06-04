@@ -6,11 +6,11 @@ const banner = document.querySelector('.app__image');
 const titulo = document.querySelector('.app__title');
 const btns = document.querySelectorAll('.app__card-button');
 const musicaFocoInput = document.querySelector('#alternar-musica');
-const musica = new Audio('/sons/luna-rise-part-one.mp3');
 const startPauseBtn = document.getElementById("start-pause");
 const iniciarPausarBtn = document.querySelector("#start-pause span");
 const timerNaTela = document.getElementById("timer");
 
+const musica = new Audio('/sons/luna-rise-part-one.mp3');
 const beepAudio = new Audio('/sons/beep.mp3');
 const playAudio = new Audio('/sons/play.wav');
 const pauseAudio = new Audio('/sons/pause.mp3');
