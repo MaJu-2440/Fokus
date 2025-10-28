@@ -69,7 +69,7 @@ function createTaskElement(task) {
     btnElement.classList.add('app_button-edit')
     
     const editBtn = document.createElement('img');
-    editBtn.setAttribute('src', '/imagens/edit.png');
+    editBtn.setAttribute('src', 'imagens/edit.png');
 
     btnElement.onclick = () => {
         const newDescription = prompt('Edit task description:', task.description).trim();
